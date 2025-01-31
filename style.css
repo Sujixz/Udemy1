@@ -1,0 +1,481 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* variables */
+:root{
+    --primary-font:"Roboto", serif;
+    --secondary-font:"DM Serif Display", serif;
+
+    --text-color:#303141;
+    --text-color-2:#595c73;
+    --udemy-color:#6d28d2;
+
+    --dropdown-box-shadow:0 0 0 1px #d1d7dc, 0 2px 4px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* reset css */
+
+ html{
+    font-size:10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li{
+     list-style: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+    cursor:pointer;
+}
+body{
+    font-family: var(--primary-font);
+    margin:0;
+    padding:0;
+   
+} 
+s-color{
+    color:#303141;
+}
+
+/* fonts for documents */
+.lg-h-font{
+    font-family: var(--secondary-font);
+    font-size:3.2rem;
+}
+.h-font{
+    font-family: var(--primary-font);
+    font-size:1.9rem;
+    font-weight: 400;
+}
+.p-font{
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    font-weight:400;
+}
+.sm-font{
+    font-family: var(--primary-font);
+    font-size: 1.4rem;
+    font-weight:400;
+}
+/* utils classes and margins for docs */
+.m-0{margin:0 !important;}
+.mt-1{margin-top: 1rem !important;}
+.mb-1{margin-bottom:1rem !important;}
+.ml-1{margin-left:1rem !important;}
+.ml-2{margin-left:2rem !important;}
+.mr-1{margin-right:1rem !important;}
+.mt-2{margin-top: 2rem !important;}
+.mt-6{margin-top: 6rem !important;}
+.mb-2{margin-bottom:2rem !important;}
+.mb-5{margin-bottom:5rem !important;}
+
+ml-2{margin-left:2rem !important;}
+mr-2{margin-right:2rem !important;}
+.text-center{text-align:center;}
+.plr-2{padding:0 2rem !important;}
+
+.b-500 {
+    font-weight:500;
+}
+.b-700{
+    font-weight:700;
+}
+
+.btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing:1px;
+    outline:none;
+    border:1px solid var(--udemy-color);
+    color:var(--udemy-color);
+    font-family:var(--primary-font);
+    font-weight:bold;
+    font-size: 1.4rem;
+    margin:0 0.3rem;
+    min-width:8rem;
+    height:4rem;
+    background: transparent;
+}
+.btn-globe{
+    min-width:auto;
+    padding:0 1.4rem;
+}
+
+/* Styling main header  */
+.main-header{
+    height: 7.2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px #00000014, 0 4px 12px #00000014;
+    display:flex;
+    padding: 0 2.4rem;
+}
+.nav-header{
+    flex:1;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-header .search-form-container {
+    flex:1;
+    background:transparent;
+    border: 1px solid #d1d7dc;
+    border-radius: 2.4rem;
+    height:4.8rem;
+    min-width:18rem;
+}
+.nav-header .search-form-container form{
+   display:flex;
+   /* background:transparent; */
+   flex-direction: row-reverse;
+   height:inherit;
+   overflow:hidden;
+}
+.nav-header .search-form-container form input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;  
+}
+.nav-header .search-form-container form button{
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:0 1.5rem;
+}
+.nav-header .nav-item {
+    margin:0 1rem;
+    cursor:pointer;   
+}
+.nav-item .btn{
+    font-weight: bold;
+}
+.nav-right{
+    display:flex;
+    align-items: center;
+}
+/* Styling header dropdown */
+.nav-dropdown {
+    position:relative;
+}
+.dropdown-content {
+    position: absolute;;
+    padding: 3rem 0;
+    z-index: 1;
+    /* border: 1px solid black; */
+    display:none;
+}
+.dropdown-list{
+    background: white;
+    border-radius: 0.8rem;
+    box-shadow: var(--dropdown-box-shadow);
+    border:1px solid #d1d7dc;
+}
+.dropdown-list li{
+    display:block;
+    padding: 1rem 2rem;
+    min-width:25rem;
+    cursor:pointer;
+}
+.display-list li a{
+    display:block;
+    padding: 1rem 2rem;
+    min-width: 25rem;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+}
+.dropdown-list a:hover{
+    color: var(--udemy-color);
+}
+.nav-dropdown:hover .dropdown-content{
+    display:block;
+}
+.dropdown-content .left{
+    left:-2rem;
+}
+/* dropdown pannel right */
+.dropdown-panel{
+    background:white;
+    border-radius: 0.8rem;
+    min-width:30rem;
+    padding:2rem;
+    box-shadow:var(--dropdown-box-shadow);
+}
+.dropdown-content.right{
+    right:0;
+}
+.btn.reverse{
+    background-color: var(--udemy-color);
+    color:white;
+}
+ #p-font-c{
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--text-color-2);
+ }
+
+ /* Styling hero area */
+ .hero{
+    position:relative;
+    max-width:134rem;
+    margin:0 auto;
+    /* margin-bottom:4.8px; */
+ }
+.hero picture{
+    max-width:100%
+}
+#bld{
+    font-weight: 500;
+}
+.hero .hero-quote{
+    position:absolute;
+    left: 7.2rem;
+    top: 6.4rem;
+    padding:4.4rem;
+    background-color:#eee;
+    box-shadow: var(--dropdown-box-shadow);
+    max-width: 44rem;
+    border-radius: 0.5rem;
+}
+/* Styling login page */
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+/* Right side: Login Box */
+.login-box {
+    width:70%;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around; 
+    align-items:center; 
+    text-align: center;
+    padding: 10px;
+    height: 65vh;
+}
+.login-box input{
+   padding:2.0rem;
+   width:125%;
+   border:1px solid var(--udemy-color);
+   border-radius:0.4rem;
+   margin-bottom:2.3rem;
+   margin-top:2.3rem;
+   
+}
+.email-input::placeholder{
+    color:var(--text-color);
+    font-size: medium;
+    font-weight:600;
+}
+.login-box button{
+    padding:1.9rem;
+    width:125%;
+    background-color:var(--udemy-color);
+    border-radius:0.4rem; 
+    outline:none;
+    border:none;  
+}
+.sub-button{
+    text-align:center;
+    font-size:medium;
+    font-weight:bold;
+    color:white;
+}
+#olo{
+    font-size:medium;
+    font-weight:500;
+    color:var(--text-color-2);
+    margin-top:3.5rem;
+}
+
+/* Styling course category */
+
+.courses-category{
+    max-width:134rem;
+    margin: 0 auto;
+}
+.courses-category h2 p{
+    margin-left:4rem;
+}
+.courses-tab{
+    display:flex;
+    width:75rem;
+    height:4rem;
+    justify-content:space-between;
+   
+}
+.courses-tab li a{
+    color:var(--text-color-2);
+    font-weight: bold;
+
+}
+.courses-tab li a:hover{
+    color:var(--text-color);
+}
+.udemy-courses{
+    margin:3rem 0;
+    display:flex;
+    /* overflow:scroll; */
+    cursor: pointer;
+}
+.courses-wrapper{
+    width:23rem;
+    height:28rem;
+    margin-right:2rem; 
+    margin-left:2rem;
+}
+.courses-wrapper .course-thumbnail{
+    width:inherit;
+    height:auto;
+    border:1px solid #eee;
+    /* overflow:hidden; */
+    justify-content:space-evenly;
+    
+}
+.courses-wrapper .course-thumbnail img{
+    max-width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+/* Styling trusted brands */
+.trusted-brands-wrapper{
+    background-color:#f7f9fa;
+    margin-bottom:4.8rem;
+}
+.trusted-brands{
+    max-width:134rem;
+    margin:0 auto;
+    padding:6.4rem;
+    justify-content: center;
+    color:var(--text-color-2); 
+}
+#h2-center{
+    justify-content: center;
+}
+.trusted-brands .brands{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.trusted-brands .brands img{
+    width:8rem;
+    height:5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling course review section */
+.courses-review-wrapper{
+    background:#f7f9fa;
+    margin-top: 3rem;
+}
+.course-review{
+    max-width: 134rem;
+    margin: 0 auto;
+    padding:4rem 0;
+}
+.course-review-container{
+    display:flex;
+    overflow:scroll;
+}
+.review-box{
+    border:1px solid #eee;
+    background-color:rgb(226, 217, 217);
+    padding:2rem;
+    width:39rem;
+    margin-right:2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-between;
+    flex-shrink:0;
+}
+
+.review-box .author{
+    display:flex;
+    align-items:center;
+}
+.review-box .user-icon{
+    width:4rem;
+    height:4rem;
+    background:black;
+    color:white;
+    font-size:2rem;
+    border-radius:50%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.course-link{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+.icon{
+    display:inline-block;
+    width:3rem;
+    height:3rem;
+    border-radius:50%;
+    background-color:var(--udemy-color);
+}
+.course-title{
+    font-size:1.7rem;
+    font-weight:700;
+    width:28rem;
+    margin-left:1rem;
+    color: var(--udemy-color);
+}
+/* styling udemy business */
+.udemy-business{
+    display:flex;
+    /* justify-content: space-between; */
+    align-items:center;
+    margin-bottom:10rem;
+}
+.promo-content{
+    width:40rem;
+    margin-right:4rem;
+}
+.ub-img{
+    width:17rem;
+    height:34rem;
+} 
+/* Styling footer */
+ footer{
+    background:black;
+    color:white;
+    padding:2rem 3rem;
+    margin-top:4rem; 
+ }
+ footer ul li a{
+    color:white;
+    font-size:1.4rem;
+    display:inline-block;
+    margin:5rem 0;
+    font-weight:300;
+ }
+ .footer-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+ }
+ .footer-2{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+ }
+ .footer-logo{
+    width:91px;
+    height:34px;
+     
+ }
